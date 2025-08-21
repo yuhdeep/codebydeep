@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading...</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            color: #fff;
+            font-family: "Montserrat", sans-serif;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .logo {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            animation: logoPop 1s ease-in-out;
+        }
+
+        @keyframes logoPop {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .loader {
+
+            border-radius: 129%;
+            border-top: 12px solid #3498db;
+
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loading-text {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            animation: textFade 2s infinite alternate;
+        }
+
+        @keyframes textFade {
+            0% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img src="imgs/logo.png" alt="Deep Rana Logo" class="logo">
+        <div class="loader"></div>
+        <div class="loading-text">Loading...</div>
+    </div>
+
+    <script>
+        // Redirect to the main page after 2 seconds
+        function redirectToMainPage() {
+            window.location.href = "index.html";
+        }
+
+        // Display an error message if the page fails to load
+        function showError() {
+            alert("Failed to load the page. Please try again.");
+        }
+
+        // Check if the page loads successfully
+        window.addEventListener('load', function () {
+            // Set a timeout to simulate the loading delay
+            setTimeout(redirectToMainPage, 3000);
+        });
+
+        // Check if there's an error in loading the page
+        window.addEventListener('error', function () {
+            showError();
+        });
+
+        // Alternatively, you can use a fallback if the page takes too long to load
+        setTimeout(function () {
+            if (document.readyState !== "complete") {
+                showError();
+            }
+        }, 5000); // Adjust the timeout as needed
+    </script>
+
+</body>
+
+</html>

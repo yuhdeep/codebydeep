@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Deep Rana - Web Developer & Instructor | Expert in Front-End, WordPress,
+    PHP
+  </title>
+  <meta charset="UTF-8" />
+  <meta name="description"
+    content="Deep Rana, experienced web developer specializing in JavaScript, HTML/CSS, WordPress, and PHP. Offering web development services and tutorials." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta property="og:title" content="Deep Rana - Web Developer & Instructor" />
+  <meta property="og:description" content="Experienced web developer specializing in JavaScript, WordPress, and PHP." />
+  <!-- <metaproperty
+      ="og:image"
+      content="https://yuh-deep.web.app/imgs/logo.png"
+    /> -->
+  <meta property="og:url" content="https://yuh-deep.web.app/" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="icon" href="imgs/logo.png" type="image/x-icon" />
+  <script type="module" src="firebase_collection.js"></script>
+  <script src="google_auth.js" defer type="module"></script>
+  <script src="server.js" defer type="module"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="imgs/logo.png" alt="Profile Picture" class="logo" />
+        <span class="logo-text">CodeByDeep</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About Me</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="main">
+    <div class="head">
+      <section class="firstsection">
+        <div class="leftsection">
+          Hello, My name is <span class="purple">Deep</span>
+          <div>and I am a</div>
+          <span id="element"></span>
+        </div>
+      </section>
+    </div>
+    <p>
+      A passionate web developer(freelancer) with a keen eye for design and functionality.
+      With 3 years of experience in crafting engaging and user-friendly
+      websites, I specialize in front-end development, ensuring seamless user
+      experiences combined with robust back-end solutions.
+    </p>
+  </div>
+
+  <!-- About me section -->
+  <div id="about">
+    <h2>Hello :)</h2>
+    <p>
+      I am Deep Experienced Information Technology professional, currently
+      excelling as an Application Analyst at Suzuki Motor Gujrat. Proficient
+      in leveraging IT solutions to drive business growth and streamline
+      operations. Skilled in application development, system analysis, and
+      project management. Possess a strong understanding of technology trends
+      and a proactive approach to problem-solving. Eager to contribute
+      expertise in IT infrastructure, software deployment, and user support.
+      Committed to enhancing organizational efficiency through innovative
+      technology solutions.
+    </p>
+    <a href="resume/Deep_Rana.pdf" download class="resume-btn btn">
+      <i class="fa fa-download"></i> Download Resume
+    </a>
+
+    <div class="Skills">
+      <h3><b>My Skills</b></h3>
+
+      <div class="accordion" id="accordionExample">
+        <!-- Web Development Section -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              <b>Web Development</b>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                I specialize in building modern websites and web applications
+                using
+                <strong>HTML, CSS, and Node.js</strong>, creating engaging and
+                efficient online experiences.
+              </p>
+              <ul>
+                <li>
+                  <strong>HTML (HyperText Markup Language):</strong> This is
+                  the foundation of any website. I use it to structure content
+                  like headings, paragraphs, images, and links, ensuring a
+                  clear and logical layout.
+                </li>
+                <li>
+                  <strong>CSS (Cascading Style Sheets):</strong> CSS brings
+                  life to the structure by adding colors, fonts, animations,
+                  and responsive designs. It ensures websites look beautiful
+                  and work perfectly on devices of all sizes.
+                </li>
+                <li>
+                  <strong>Node Js:</strong>Behind the scenes, Node.js powers
+                  the interactive and dynamic features of websites and apps.
+                  It ensures smooth functionality, real-time updates, and the
+                  ability to handle many users simultaneously.
+                </li>
+              </ul>
+              <p>
+                In simple terms, I create websites and applications that are
+                visually appealing, user-friendly, and highly
+                functional—delivering a seamless online experience from front
+                to back.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Node.js Section -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <b>Back-End Development</b>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                I work with <strong>Node.js</strong>, a powerful platform that
+                lets me build fast and efficient web applications. It enables
+                real-time features like chats, live updates, and seamless user
+                interactions.
+              </p>
+              <p>With Node.js, I create:</p>
+              <ul>
+                <li>
+                  <strong>Dynamic Websites:</strong> These adapt to users'
+                  needs and display updated content instantly.
+                </li>
+                <li>
+                  <strong>Web Applications:</strong> Tools like online
+                  calculators, chat systems, or e-commerce platforms.
+                </li>
+                <li>
+                  <strong>Server-Side Solutions:</strong> Ensuring the
+                  backbone of websites is secure, fast, and reliable.
+                </li>
+              </ul>
+              <p>
+                In simpler terms, I use Node.js to make websites and apps
+                perform smoothly and handle a lot of users without breaking a
+                sweat.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full-Stack Web Development Section -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <b>Full-Stack Web Development</b>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                I leverage a blend of technologies, including
+                <strong>HTML, CSS, Node.js, PHP, and XAMPP</strong>, to create
+                functional, stylish, and dynamic websites and applications.
+              </p>
+              <ul>
+                <li>
+                  <strong>HTML:</strong> Lays the foundation by structuring
+                  content like headings, images, and links for clarity and
+                  usability.
+                </li>
+                <li>
+                  <strong>CSS:</strong> Enhances visual appeal with colors,
+                  layouts, animations, and responsive designs that work
+                  flawlessly across devices.
+                </li>
+                <li>
+                  <strong>PHP:</strong> Adds dynamic functionality, enabling
+                  user interactions like forms, logins, and database
+                  connections.
+                </li>
+                <li>
+                  <strong>XAMPP:</strong> Provides a local testing environment
+                  to develop and test websites with real-world functionality
+                  before going live.
+                </li>
+              </ul>
+              <p>
+                By combining these tools, I deliver websites and web
+                applications that are not only visually impressive but also
+                optimized for functionality, user experience, and scalability.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database Management Expertise (MySQL & Oracle) -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+              <b>Database Management (MySQL & Oracle)</b>
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <p>
+                I have hands-on experience working with
+                <strong>MySQL and Oracle databases,</strong> which are
+                essential tools for organizing and managing large sets of data
+                efficiently. In my role within the automobile industry, I’ve
+                utilized these databases to maintain accurate records of
+                vehicle details, customer information, and operational
+                metrics. This includes tasks such as:
+              </p>
+              <ul>
+                <li>
+                  <strong>Data Analysis:</strong> Extracting meaningful
+                  insights from complex datasets to support decision-making.
+                </li>
+                <li>
+                  <strong>Data Organization:</strong>Structuring data to
+                  ensure quick and easy access for various teams.
+                </li>
+                <li>
+                  <strong>Reporting:</strong>Generating detailed reports for
+                  management to track performance, inventory, and trends.
+                </li>
+              </ul>
+              <p>
+                By using these tools, I’ve been able to contribute to
+                streamlining processes, improving data accuracy, and
+                supporting analytics that drive business improvements in the
+                automobile sector.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Services Section -->
+
+  <section id="services" class="services-section">
+    <h2 class="w3-padding-16 w3-text-dark-grey text-center">Our Services</h2>
+
+    <div class="w3-row-padding" style="margin: 0 -16px" data-aos="zoom-in">
+      <!-- Service 1 -->
+      <div class="w3-third w3-margin-bottom">
+        <div class="service-card">
+          <h3 class="service-title">Web Development</h3>
+          <p class="service-description">Create stunning, responsive websites tailored to your needs.</p>
+          <ul class="service-features">
+            <li>Custom designs</li>
+            <li>SEO optimization</li>
+            <li>Performance tuning</li>
+          </ul>
+          <button class="service-btn" id="googleSignInBtnBasic">Learn More</button>
+        </div>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="w3-third w3-margin-bottom">
+        <div class="service-card">
+          <h3 class="service-title">App Development</h3>
+          <p class="service-description">Build cross-platform mobile apps for seamless user experiences.</p>
+          <ul class="service-features">
+            <li>iOS & Android</li>
+            <li>Feature-rich interfaces</li>
+            <li>Cloud integration</li>
+          </ul>
+          <button class="service-btn" id="googleSignInBtnBasic">Learn More</button>
+        </div>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="w3-third w3-margin-bottom">
+        <div class="service-card">
+          <h3 class="service-title">UI/UX Design</h3>
+          <p class="service-description">Craft intuitive interfaces with a focus on user satisfaction.</p>
+          <ul class="service-features">
+            <li>Prototyping & wireframes</li>
+            <li>Responsive design</li>
+            <li>Brand identity</li>
+          </ul>
+          <button class="service-btn" id="googleSignInBtnBasic">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Portfolio Section -->
+  <div id="Projects">
+    <h2>My Projects</h2>
+    <div class="projects-container">
+      <div class="project-card">
+        <img src="imgs/portfolio.jpg" alt="Portfolio Website" />
+        <h3>
+          <a href="https://deep-rana.web.app/" target="_blank">Responsive Portfolio Website</a>
+        </h3>
+        <p class="description">
+          A personal portfolio website designed to showcase my skills and
+          projects.
+        </p>
+        <p class="technologies">
+          <strong>Technologies Used:</strong> HTML, CSS, JavaScript, Bootstrap, Firebase storage.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="imgs/e-com1.jpg" alt="V Perfumes" />
+        <h3>V Perfumes</h3>
+        <p class="description">
+          An e-commerce platform with a user-friendly interface.
+        </p>
+        <p class="technologies">
+          <strong>Technologies Used:</strong> Flutter, Dart, Firebase
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="imgs/blog.jpg" alt="Blog Website" />
+        <h3>My Blog</h3>
+        <p class="description">
+          A blogging platform where users can create, edit, and delete posts.
+        </p>
+        <p class="technologies">
+          <strong>Technologies Used:</strong> React, Node.js, Express, MongoDB
+        </p>
+      </div>
+
+      <div class="project-card">
+        <img src="imgs/chat-app1.jpg" alt="Chat Application" />
+        <h3>Real-time Chat Application</h3>
+        <p class="description">
+          A real-time chat application that allows users to communicate instantly.
+        </p>
+        <p class="technologies">
+          <strong>Technologies Used:</strong> Socket.io, Node.js, Express, MongoDB
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Contact Section -->
+  <div id="contact">
+    <h2>Contact Me</h2>
+    <div>
+      <p><i class="fa fa-map-marker"></i> Gujrat, India</p>
+      <p><i class="fa fa-phone"></i> Phone: +91 6352492008</p>
+      <p><i class="fa fa-envelope"></i> Email: deep.dev@gmail.com</p>
+    </div>
+    <p>Let's get in touch. Send me a message:</p>
+    <form id="contactForm">
+      <p>
+        <input id="username" type="text" placeholder="Name" required name="Name" />
+      </p>
+      <p>
+        <input id="email" type="email" placeholder="Email" required name="Email" />
+      </p>
+      <p>
+        <input id="subject" type="text" placeholder="Subject" required name="Subject" />
+      </p>
+      <p>
+        <textarea id="message" placeholder="Message" required name="Message"></textarea>
+      </p>
+      <p>
+        <button id="submit" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>"Connect with me on social media!"</p>
+    <a href="https://www.facebook.com/share/JY8gBbjhMKdxBcrD/?mibextid=qi2Omg" target="_blank">
+      <i class="fa fa-facebook-official"></i></a>
+    <a href="https://www.instagram.com/deep_29__?igsh=Njh6dTEzN3hoeG9k" target="_blank">
+      <i class="fa fa-instagram"></i></a>
+    <a href="https://x.com/Rana_2912_?t=u3dCBuM5H5KdYr_-yDTktw&s=09" target="_blank">
+      <i class="fa fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/deep-rana-b14604244?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      target="_blank">
+      <i class="fa fa-linkedin"></i></a>
+    <p>&copy; 2023 Deep Rana. All rights reserved.</p>
+  </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+  <!-- Include Typed.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  <!-- Initialize Typed.js -->
+  <script>
+    var typed = new Typed("#element", {
+      strings: [
+        "Full-Stack Developer",
+        "Web  Developer",
+        "Database Analyst (MySQL & Oracle)",
+      ],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true,
+    }); 
+  </script>
+</body>
+
+</html>

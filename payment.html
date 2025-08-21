@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://js.stripe.com/v3/"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-color: black;
+        }
+
+        .payment-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .payment-container h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .payment-container p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .payment-container form {
+            margin-top: 20px;
+        }
+
+        #card-element {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        .w3-button {
+            width: 100%;
+            background-color: white;
+            color: black;
+            padding: 15px 20px;
+            text-align: center;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .w3-button:hover {
+            background-color: black;
+            color: white;
+            border: solid black 2px;
+        }
+
+        #payment-message {
+            color: black;
+            font-weight: bold;
+        }
+
+        #userEmail {
+            font-size: 18px;
+            font-family: Montserrat, sans-serif;
+            color: black;
+        }
+
+        /* Responsive Styles */
+        /* @media (max-width: 600px) {
+            .payment-container {
+                padding: 15px;
+                box-shadow: none;
+            }
+
+            .w3-button {
+                font-size: 14px;
+                padding: 12px 15px;
+            }
+
+            #card-element {
+                padding: 8px;
+            }
+
+            #userEmail {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .payment-container {
+                padding: 10px;
+            }
+
+            .w3-button {
+                font-size: 12px;
+                padding: 10px;
+            }
+
+            #card-element {
+                padding: 6px;
+            }
+
+            #userEmail {
+                font-size: 14px;
+            }
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="payment-container w3-animate-opacity">
+        <h3>Complete Your Payment</h3>
+        <p id="userEmail" style="font-family: Montserrat, sans-serif;">Loading...</p>
+        <form id="payment-form">
+            <div id="card-element"></div>
+            <button class="w3-button" type="submit">Pay Now</button>
+
+
+        </form>
+        <div id="payment-message" style="display: none;">Payment successful! Thank you.</div>
+    </div>
+
+    <script>
+        const stripe = Stripe('your-publishable-key-here');
+        const elements = stripe.elements();
+        const cardElement = elements.create('card');
+        cardElement.mount('#card-element');
+
+        const email = new URLSearchParams(window.location.search).get('email');
+        const userEmailElement = document.getElementById('userEmail');
+
+        if (email) {
+            userEmailElement.innerText = `You are logged in with: ${email}`;
+        } else {
+            userEmailElement.innerText = 'No email found. Something went wrong.';
+        }
+    </script>
+</body>
+
+</html>

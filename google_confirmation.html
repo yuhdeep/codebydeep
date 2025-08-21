@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Successful</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Body styles */
+body {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #000;
+    /* Background color black */
+}
+
+/* Confirmation container styles */
+.confirmation-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Icon styles */
+.confirmation-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+    fill: #4caf50;
+    /* Green color for the checkmark */
+    stroke-width: 2;
+    stroke: #4caf50;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: drawCheckmark 1s ease forwards;
+}
+
+/* Animation keyframes */
+@keyframes drawCheckmark {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Heading styles */
+.confirmation-container h1 {
+    margin-top: 0;
+    font-size: 24px;
+}
+
+/* Paragraph styles */
+.confirmation-container p {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="confirmation-container">
+        <!-- SVG Checkmark Icon with animation -->
+        <svg class="confirmation-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path
+                d="M20.285 6.287a1 1 0 0 1 1.415 1.413l-11 11a1 1 0 0 1-1.415 0l-5.5-5.5a1 1 0 0 1 1.415-1.415l4.9 4.9 10.585-10.585z" />
+        </svg>
+
+        <div class="w3-padding-large w3-center">
+           <h4> <b>Login successfully !</b></h4>
+            <p class="w3-text-grey" id = "userEmail">Loading...</p>
+            <a href="index.html" class="w3-button w3-light-grey w3-padding-large w3-margin-top">Go Back to Home</a>
+            <button class="w3-button w3-light-grey w3-padding-large w3-margin-top" id="proceedToPaymentBtn">Proceed To Payment</button>
+        </div>
+
+    <script defer type="module">
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        const email = getQueryParam('email');
+        if (email) {
+            document.getElementById('userEmail').innerText = `You have successfully logged in with the email: ${email}`;
+        } else {
+            document.getElementById('userEmail').innerText = 'No email found. Something went wrong.';
+        }
+
+        document.getElementById('proceedToPaymentBtn').addEventListener('click', function() {
+            window.location.href = `payment.html?email=${encodeURIComponent(email)}`;
+        });
+    </script>
+</body>
+
+</html>

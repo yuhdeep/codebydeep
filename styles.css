@@ -1,0 +1,531 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-brand {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: #8b8b94;
+}
+
+.logo-text {
+  display: inline-block;
+  font-size: 1.3rem;
+  padding-left: 35px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+}
+
+.navbar {
+  background: rgb(10, 5, 59);
+}
+
+.nav-link {
+  color: #dddddd;
+  font-weight: 500;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 10px 30px;
+}
+
+
+header {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to bottom, rgb(0, 0, 33), #212529);
+  color: white;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 10px;
+}
+
+#main {
+  padding: 50px 20px;
+  background: rgb(0, 0, 33);
+  ;
+}
+
+#main h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+  color: rgb(0, 0, 33);
+}
+
+#main p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ffffff;
+  text-align: center;
+}
+
+#about {
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  line-height: 1.8;
+  padding-bottom: 30px;
+}
+
+#about a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#contact {
+  padding: 50px 20px;
+  background: #ffffff;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#contact p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#contact form input,
+#contact form textarea,
+#contact form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#contact form button {
+  background: rgb(165, 96, 229);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contact form button:hover {
+  background: rgb(0, 0, 33);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgb(0, 0, 33);
+  color: white;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: rgb(165, 96, 229);
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+footer a:hover {
+  color: #ffffff;
+}
+
+.head {
+  margin: 0;
+  padding: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+  overflow: hidden
+}
+
+
+.firstsection {
+  text-align: center;
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.leftsection {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+  
+}
+
+.leftsection .purple {
+  color: #a55deb;
+  font-size: 3rem;
+  text-shadow: 0px 0px 8px rgba(165, 93, 235, 0.8);
+}
+
+#element {
+  color: #ccbaee;
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-shadow: 0 0 10px #2f3be2,
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.resume-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: Black;
+  text-decoration: none;
+  background: linear-gradient(45deg, #d6c6c6, #052fb8);
+  border: none;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-30deg);
+  transition: left 0.5s ease;
+}
+
+.resume-btn:hover::before {
+  left: 100%;
+}
+
+.resume-btn:hover {
+  background: linear-gradient(45deg, #dddde7, #8d91cf);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.resume-btn i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+.resume-btn:hover i {
+  transform: scale(1.2);
+
+}
+
+
+.card {
+  border: none;
+  border-radius: 15px;
+}
+
+/* General Styles */
+#Projects {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+#Projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+  text-transform: uppercase;
+}
+
+/* Projects Container */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Project Card */
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Card Image */
+.project-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Project Card Text */
+.project-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: black;
+
+}
+
+.project-card h3 a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.project-card h3 a:hover {
+  color: #0056b3;
+}
+
+.project-card .description {
+  font-size: 1rem;
+  color: #555;
+  padding: 0 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card .technologies {
+  font-size: 0.9rem;
+  color: #777;
+  padding: 0 1rem 1rem;
+  text-align: left;
+}
+
+.services-section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.service-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  color: #777;
+}
+
+.service-features li {
+  margin: 8px 0;
+  font-size: 0.9rem;
+}
+
+.service-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background: linear-gradient(45deg, #6a5acd, #483d8b);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.service-btn:hover {
+  background: linear-gradient(45deg, #483d8b, #6a5acd);
+}
+
+
+@media (max-width: 768px) {
+  .leftsection {
+    font-size: 1.5rem;
+    height: 30vh;
+
+  }
+
+  .leftsection .purple {
+    font-size: 1.5rem;
+  }
+
+  #element {
+    font-size: 1.5rem;
+  }
+
+  #main p {
+    font-size: 10px;
+  }
+
+  #main {
+    height: 87vh;
+  }
+
+  .head {
+    height: 56vh;
+  }
+
+  #Projects h2 {
+    font-size: 2rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem;
+    color: black;
+  }
+
+  .w3-third {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .service-title {
+    font-size: 1.3rem;
+  }
+
+  .service-description {
+    font-size: 0.9rem;
+  }
+
+  .service-btn {
+    font-size: 0.9rem;
+  }
+}
+
+.rk {
+  padding-right: 150px;
+}
+
+@media screen and (max-width: 768px) {
+  #main {
+    padding: 30px 15px;
+    text-align: center;
+  }
+
+  .head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .firstsection {
+    width: 100%;
+  }
+
+  .leftsection {
+    font-size: 1.2rem;
+    text-align: center;
+    height: 50vh;
+  }
+
+  #main h2 {
+    font-size: 2rem;
+  }
+
+  #main p {
+    font-size: 0.9rem;
+    padding: 0 10px;
+  }
+
+  header {
+    padding: 50px 15px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 0.8rem;
+  }
+}
